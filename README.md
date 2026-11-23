@@ -36,20 +36,3 @@ Para reproduzir os 9.999 sorteios do artigo nas três ponderações, o bootstrap
 
 A base municipal integrada acompanha o projeto. Para reconstruí-la, use `reconstruir_base.R`. Essa rotina adicional requer `data.table`, `jsonlite` e `pdftools`, acesso às fontes e memória para ler os arquivos administrativos. Os nomes e as URLs estão em `fontes.json`. Para baixar os arquivos que faltam e reconstruir, rode `Rscript reconstruir_base.R --baixar`. Se os insumos já estiverem em `brutos/`, use `Rscript reconstruir_base.R`. Os dados reconstruídos ficam em `reconstruidos/`. A rotina verifica a soma da folha, as 2.458 divergências de média monetária, as 17 exceções de nome e os totais dos NIS. Os registros individuais são usados apenas localmente.
 
-A validação desta conversão partiu dos agregados municipais distribuídos e abrangeu as 14 tabelas de conferência. A reconstrução opcional teve a sintaxe verificada. A rotina com todos os arquivos brutos não foi executada nesta revisão. O ChatGPT fez a conversão dos scripts de reprodução para R e a comparação numérica com as saídas arquivadas.
-
-## Registro de consulta às fontes
-
-| Fonte consultada | Data e hora em São Paulo | HTTP |
-| --- | --- | --- |
-| <https://www.gov.br/casacivil/pt-br/assuntos/noticias/2022/setembro/auxilio-brasil-atinge-a-marca-de-20-65-milhoes-de-familias-contempladas> | 2026-11-22T23:52:58.387824-03:00 | 200 |
-| <https://web.archive.org/web/20220809130456/https://www.gov.br/cidadania/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/auxilio-brasil-inclui-2-2-milhoes-de-familias-chega-a-um-total-de-20-2-milhoes-e-zera-fila> | 2026-11-22T23:52:56.755856-03:00 | 200 |
-| <https://web.archive.org/web/20220922124034id_/https://www.gov.br/cidadania/pt-br/noticias-e-conteudos/desenvolvimento-social/noticias-desenvolvimento-social/auxilio-brasil-chega-a-marca-inedita-de-20-65-milhoes-de-familias-contempladas-em-setembro/pab-setembro.pdf> | 2026-11-22T23:52:56.932027-03:00 | 200 |
-| <https://www.gov.br/mds/pt-br/privados/informe-auxilio-brasil-e-cadastro-unico/informe-gestores-862> | 2026-11-22T23:52:58.559775-03:00 | 200 |
-| <https://www2.camara.leg.br/legin/fed/medpro/2023/medidaprovisoria-1164-2-marco-2023-793816-norma-pe.html> | 2026-11-22T23:52:56.475700-03:00 | 200 |
-| <https://portaldatransparencia.gov.br/download-de-dados/bolsa-familia-pagamentos/202110> | 2026-11-22T23:53:00.611565-03:00 | 200 |
-| <https://portaldatransparencia.gov.br/download-de-dados/auxilio-brasil/202209> | 2026-11-22T23:53:00.435577-03:00 | 200 |
-| <https://sidra.ibge.gov.br> | 2026-11-22T23:52:59.535777-03:00 | 200 |
-| <https://cowles.yale.edu/node/145881> | 2026-11-22T23:52:56.424028-03:00 | 200 |
-| <https://www.tesourotransparente.gov.br/ckan/dataset/abb968cb-3710-4f85-89cf-875c91b9c7f6/resource/eebb3bc6-9eea-4496-8bcf-304f33155282/download/tabmun.csv> | 2026-11-22T23:52:56.427595-03:00 | 200 |
-| <https://dadosabertos.tse.jus.br> | 2026-11-22T23:52:57.187590-03:00 | 200 |
